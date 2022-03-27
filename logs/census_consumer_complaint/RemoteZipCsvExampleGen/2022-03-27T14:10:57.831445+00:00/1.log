@@ -1,0 +1,50 @@
+[2022-03-27 14:11:04,147] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: census_consumer_complaint.RemoteZipCsvExampleGen manual__2022-03-27T14:10:57.831445+00:00 [queued]>
+[2022-03-27 14:11:04,155] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: census_consumer_complaint.RemoteZipCsvExampleGen manual__2022-03-27T14:10:57.831445+00:00 [queued]>
+[2022-03-27 14:11:04,155] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-27 14:11:04,155] {taskinstance.py:1244} INFO - Starting attempt 1 of 1
+[2022-03-27 14:11:04,155] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-27 14:11:04,163] {taskinstance.py:1264} INFO - Executing <Task(AirflowComponent): RemoteZipCsvExampleGen> on 2022-03-27 14:10:57.831445+00:00
+[2022-03-27 14:11:04,175] {standard_task_runner.py:52} INFO - Started process 131 to run task
+[2022-03-27 14:11:04,179] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'census_consumer_complaint', 'RemoteZipCsvExampleGen', 'manual__2022-03-27T14:10:57.831445+00:00', '--job-id', '142', '--raw', '--subdir', 'DAGS_FOLDER/census_consumer_complaint.py', '--cfg-path', '/tmp/tmp3um9p0r3', '--error-file', '/tmp/tmpmqri7jo6']
+[2022-03-27 14:11:04,179] {standard_task_runner.py:77} INFO - Job 142: Subtask RemoteZipCsvExampleGen
+[2022-03-27 14:11:04,223] {logging_mixin.py:109} INFO - Running <TaskInstance: census_consumer_complaint.RemoteZipCsvExampleGen manual__2022-03-27T14:10:57.831445+00:00 [running]> on host 691464fec4e5
+[2022-03-27 14:11:04,265] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=census_consumer_complaint
+AIRFLOW_CTX_TASK_ID=RemoteZipCsvExampleGen
+AIRFLOW_CTX_EXECUTION_DATE=2022-03-27T14:10:57.831445+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-03-27T14:10:57.831445+00:00
+[2022-03-27 14:11:04,267] {base_component_launcher.py:190} INFO - Running driver for RemoteZipCsvExampleGen
+[2022-03-27 14:11:04,271] {metadata_store.py:101} INFO - MetadataStore with DB connection initialized
+[2022-03-27 14:11:04,272] {utils.py:698} INFO - select span and version = (0, None)
+[2022-03-27 14:11:04,272] {utils.py:707} INFO - latest span and version = (0, None)
+[2022-03-27 14:11:04,285] {base_component_launcher.py:196} INFO - Running executor for RemoteZipCsvExampleGen
+[2022-03-27 14:11:04,287] {base_example_gen_executor.py:272} INFO - Generating examples.
+[2022-03-27 14:11:04,288] {pipeline.py:188} INFO - Missing pipeline option (runner). Executing pipeline using the default runner: DirectRunner.
+[2022-03-27 14:11:04,296] {logging_mixin.py:109} INFO - Downloading file in  /opt/***/zip_to_csv
+[2022-03-27 14:12:17,118] {logging_mixin.py:109} INFO - Extracting file in  /opt/***/zip_to_csv
+[2022-03-27 14:12:30,208] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/apache_beam/runners/runner.py:215: DtypeWarning: Columns (9) have mixed types.Specify dtype option on import or set low_memory=False.
+  return transform.expand(input)
+
+[2022-03-27 14:12:44,501] {executor.py:179} INFO - Processing input csv data /opt/***/zip_to_csv/* to TFExample.
+[2022-03-27 14:12:44,789] {environments.py:374} WARNING - Make sure that locally built Python SDK docker image has Python 3.7 interpreter.
+[2022-03-27 14:12:44,789] {environments.py:380} INFO - Default Python SDK image for environment is apache/beam_python3.7_sdk:2.37.0
+[2022-03-27 14:12:44,979] {translations.py:678} INFO - ==================== <function annotate_downstream_side_inputs at 0x7f56dbbed320> ====================
+[2022-03-27 14:12:44,980] {translations.py:678} INFO - ==================== <function fix_side_input_pcoll_coders at 0x7f56dbbed440> ====================
+[2022-03-27 14:12:44,981] {translations.py:678} INFO - ==================== <function pack_combiners at 0x7f56dbbed950> ====================
+[2022-03-27 14:12:44,982] {translations.py:678} INFO - ==================== <function lift_combiners at 0x7f56dbbed9e0> ====================
+[2022-03-27 14:12:44,983] {translations.py:678} INFO - ==================== <function expand_sdf at 0x7f56dbbedb90> ====================
+[2022-03-27 14:12:44,983] {translations.py:678} INFO - ==================== <function expand_gbk at 0x7f56dbbedc20> ====================
+[2022-03-27 14:12:44,984] {translations.py:678} INFO - ==================== <function sink_flattens at 0x7f56dbbedd40> ====================
+[2022-03-27 14:12:44,985] {translations.py:678} INFO - ==================== <function greedily_fuse at 0x7f56dbbeddd0> ====================
+[2022-03-27 14:12:44,988] {translations.py:678} INFO - ==================== <function read_to_impulse at 0x7f56dbbede60> ====================
+[2022-03-27 14:12:44,988] {translations.py:678} INFO - ==================== <function impulse_to_input at 0x7f56dbbedef0> ====================
+[2022-03-27 14:12:44,988] {translations.py:678} INFO - ==================== <function sort_stages at 0x7f56dbbef170> ====================
+[2022-03-27 14:12:44,989] {translations.py:678} INFO - ==================== <function setup_timer_mapping at 0x7f56dbbef0e0> ====================
+[2022-03-27 14:12:44,989] {translations.py:678} INFO - ==================== <function populate_data_channel_coders at 0x7f56dbbef200> ====================
+[2022-03-27 14:12:44,996] {statecache.py:172} INFO - Creating state cache with size 100
+[2022-03-27 14:12:44,997] {worker_handlers.py:894} INFO - Created Worker handler <apache_beam.runners.portability.fn_api_runner.worker_handlers.EmbeddedWorkerHandler object at 0x7f56d8f79c90> for environment ref_Environment_default_environment_1 (beam:env:embedded_python:v1, b'')
+[2022-03-27 14:12:44,997] {fn_runner.py:621} INFO - Running ((((ref_AppliedPTransform_InputToRecord-CreateFilenames-Impulse_4)+(ref_AppliedPTransform_InputToRecord-CreateFilenames-FlatMap-lambda-at-core-py-3228-_5))+(ref_AppliedPTransform_InputToRecord-CreateFilenames-MaybeReshuffle-Reshuffle-AddRandomKeys_8))+(ref_AppliedPTransform_InputToRecord-CreateFilenames-MaybeReshuffle-Reshuffle-ReshufflePerKey-Map-rei_10))+(InputToRecord/CreateFilenames/MaybeReshuffle/Reshuffle/ReshufflePerKey/GroupByKey/Write)
+[2022-03-27 14:12:45,015] {fn_runner.py:621} INFO - Running ((((((((((InputToRecord/CreateFilenames/MaybeReshuffle/Reshuffle/ReshufflePerKey/GroupByKey/Read)+(ref_AppliedPTransform_InputToRecord-CreateFilenames-MaybeReshuffle-Reshuffle-ReshufflePerKey-FlatMap_12))+(ref_AppliedPTransform_InputToRecord-CreateFilenames-MaybeReshuffle-Reshuffle-RemoveRandomKeys_13))+(ref_AppliedPTransform_InputToRecord-CreateFilenames-Map-decode-_14))+(ref_AppliedPTransform_InputToRecord-ReadFromText_15))+(ref_AppliedPTransform_InputToRecord-ParseCSVLine_16))+(ref_AppliedPTransform_InputToRecord-ExtractParsedCSVLines-Keys_18))+(ref_AppliedPTransform_InputToRecord-InferColumnTypes-KeyWithVoid_20))+(ref_PCollection_PCollection_11/Write))+(InputToRecord/InferColumnTypes/CombinePerKey/Precombine))+(InputToRecord/InferColumnTypes/CombinePerKey/Group/Write)

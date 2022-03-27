@@ -1,0 +1,75 @@
+[2022-03-24 15:42:39,419] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: census_consumer_complaint.RemoteZipCsvExampleGen manual__2022-03-24T15:42:29.578379+00:00 [queued]>
+[2022-03-24 15:42:39,428] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: census_consumer_complaint.RemoteZipCsvExampleGen manual__2022-03-24T15:42:29.578379+00:00 [queued]>
+[2022-03-24 15:42:39,428] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-24 15:42:39,428] {taskinstance.py:1244} INFO - Starting attempt 1 of 1
+[2022-03-24 15:42:39,428] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-24 15:42:39,435] {taskinstance.py:1264} INFO - Executing <Task(AirflowComponent): RemoteZipCsvExampleGen> on 2022-03-24 15:42:29.578379+00:00
+[2022-03-24 15:42:39,448] {standard_task_runner.py:52} INFO - Started process 231 to run task
+[2022-03-24 15:42:39,451] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'census_consumer_complaint', 'RemoteZipCsvExampleGen', 'manual__2022-03-24T15:42:29.578379+00:00', '--job-id', '55', '--raw', '--subdir', 'DAGS_FOLDER/census_consumer_complaint.py', '--cfg-path', '/tmp/tmpbypa6c82', '--error-file', '/tmp/tmpci873q53']
+[2022-03-24 15:42:39,451] {standard_task_runner.py:77} INFO - Job 55: Subtask RemoteZipCsvExampleGen
+[2022-03-24 15:42:39,488] {logging_mixin.py:109} INFO - Running <TaskInstance: census_consumer_complaint.RemoteZipCsvExampleGen manual__2022-03-24T15:42:29.578379+00:00 [running]> on host 691464fec4e5
+[2022-03-24 15:42:39,524] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=census_consumer_complaint
+AIRFLOW_CTX_TASK_ID=RemoteZipCsvExampleGen
+AIRFLOW_CTX_EXECUTION_DATE=2022-03-24T15:42:29.578379+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-03-24T15:42:29.578379+00:00
+[2022-03-24 15:42:39,525] {base_component_launcher.py:190} INFO - Running driver for RemoteZipCsvExampleGen
+[2022-03-24 15:42:39,690] {metadata_store.py:101} INFO - MetadataStore with DB connection initialized
+[2022-03-24 15:42:39,691] {utils.py:698} INFO - select span and version = (0, None)
+[2022-03-24 15:42:39,691] {utils.py:707} INFO - latest span and version = (0, None)
+[2022-03-24 15:42:39,727] {base_component_launcher.py:196} INFO - Running executor for RemoteZipCsvExampleGen
+[2022-03-24 15:42:39,728] {base_example_gen_executor.py:272} INFO - Generating examples.
+[2022-03-24 15:42:39,729] {pipeline.py:188} INFO - Missing pipeline option (runner). Executing pipeline using the default runner: DirectRunner.
+[2022-03-24 15:42:39,738] {logging_mixin.py:109} INFO - Downloading file in  /opt/***/zip_to_csv
+[2022-03-24 15:43:18,557] {logging_mixin.py:109} INFO - Extracting file in  /opt/***/zip_to_csv
+[2022-03-24 15:43:31,344] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/apache_beam/runners/runner.py:215: DtypeWarning: Columns (9) have mixed types.Specify dtype option on import or set low_memory=False.
+  return transform.expand(input)
+
+[2022-03-24 15:43:43,406] {executor.py:179} INFO - Processing input csv data /opt/***/zip_to_csv/* to TFExample.
+[2022-03-24 15:43:43,650] {environments.py:374} WARNING - Make sure that locally built Python SDK docker image has Python 3.7 interpreter.
+[2022-03-24 15:43:43,650] {environments.py:380} INFO - Default Python SDK image for environment is apache/beam_python3.7_sdk:2.37.0
+[2022-03-24 15:43:43,802] {translations.py:678} INFO - ==================== <function annotate_downstream_side_inputs at 0x7f28361e3cb0> ====================
+[2022-03-24 15:43:43,803] {translations.py:678} INFO - ==================== <function fix_side_input_pcoll_coders at 0x7f28361e3dd0> ====================
+[2022-03-24 15:43:43,804] {translations.py:678} INFO - ==================== <function pack_combiners at 0x7f28361e4320> ====================
+[2022-03-24 15:43:43,805] {translations.py:678} INFO - ==================== <function lift_combiners at 0x7f28361e43b0> ====================
+[2022-03-24 15:43:43,805] {translations.py:678} INFO - ==================== <function expand_sdf at 0x7f28361e4560> ====================
+[2022-03-24 15:43:43,806] {translations.py:678} INFO - ==================== <function expand_gbk at 0x7f28361e45f0> ====================
+[2022-03-24 15:43:43,807] {translations.py:678} INFO - ==================== <function sink_flattens at 0x7f28361e4710> ====================
+[2022-03-24 15:43:43,807] {translations.py:678} INFO - ==================== <function greedily_fuse at 0x7f28361e47a0> ====================
+[2022-03-24 15:43:43,810] {translations.py:678} INFO - ==================== <function read_to_impulse at 0x7f28361e4830> ====================
+[2022-03-24 15:43:43,810] {translations.py:678} INFO - ==================== <function impulse_to_input at 0x7f28361e48c0> ====================
+[2022-03-24 15:43:43,810] {translations.py:678} INFO - ==================== <function sort_stages at 0x7f28361e4b00> ====================
+[2022-03-24 15:43:43,811] {translations.py:678} INFO - ==================== <function setup_timer_mapping at 0x7f28361e4a70> ====================
+[2022-03-24 15:43:43,811] {translations.py:678} INFO - ==================== <function populate_data_channel_coders at 0x7f28361e4b90> ====================
+[2022-03-24 15:43:43,817] {statecache.py:172} INFO - Creating state cache with size 100
+[2022-03-24 15:43:43,818] {worker_handlers.py:894} INFO - Created Worker handler <apache_beam.runners.portability.fn_api_runner.worker_handlers.EmbeddedWorkerHandler object at 0x7f28333b8ed0> for environment ref_Environment_default_environment_1 (beam:env:embedded_python:v1, b'')
+[2022-03-24 15:43:43,818] {fn_runner.py:621} INFO - Running ((((ref_AppliedPTransform_InputToRecord-CreateFilenames-Impulse_4)+(ref_AppliedPTransform_InputToRecord-CreateFilenames-FlatMap-lambda-at-core-py-3228-_5))+(ref_AppliedPTransform_InputToRecord-CreateFilenames-MaybeReshuffle-Reshuffle-AddRandomKeys_8))+(ref_AppliedPTransform_InputToRecord-CreateFilenames-MaybeReshuffle-Reshuffle-ReshufflePerKey-Map-rei_10))+(InputToRecord/CreateFilenames/MaybeReshuffle/Reshuffle/ReshufflePerKey/GroupByKey/Write)
+[2022-03-24 15:43:43,835] {fn_runner.py:621} INFO - Running ((((((((((InputToRecord/CreateFilenames/MaybeReshuffle/Reshuffle/ReshufflePerKey/GroupByKey/Read)+(ref_AppliedPTransform_InputToRecord-CreateFilenames-MaybeReshuffle-Reshuffle-ReshufflePerKey-FlatMap_12))+(ref_AppliedPTransform_InputToRecord-CreateFilenames-MaybeReshuffle-Reshuffle-RemoveRandomKeys_13))+(ref_AppliedPTransform_InputToRecord-CreateFilenames-Map-decode-_14))+(ref_AppliedPTransform_InputToRecord-ReadFromText_15))+(ref_AppliedPTransform_InputToRecord-ParseCSVLine_16))+(ref_AppliedPTransform_InputToRecord-ExtractParsedCSVLines-Keys_18))+(ref_AppliedPTransform_InputToRecord-InferColumnTypes-KeyWithVoid_20))+(ref_PCollection_PCollection_11/Write))+(InputToRecord/InferColumnTypes/CombinePerKey/Precombine))+(InputToRecord/InferColumnTypes/CombinePerKey/Group/Write)
+[2022-03-24 15:44:18,601] {fn_runner.py:621} INFO - Running ((((InputToRecord/InferColumnTypes/CombinePerKey/Group/Read)+(InputToRecord/InferColumnTypes/CombinePerKey/Merge))+(InputToRecord/InferColumnTypes/CombinePerKey/ExtractOutputs))+(ref_AppliedPTransform_InputToRecord-InferColumnTypes-UnKey_25))+(ref_PCollection_PCollection_15/Write)
+[2022-03-24 15:44:18,611] {fn_runner.py:621} INFO - Running (((((ref_AppliedPTransform_WriteSplit-train-Write-Write-WriteImpl-DoOnce-Impulse_49)+(ref_AppliedPTransform_WriteSplit-train-Write-Write-WriteImpl-DoOnce-FlatMap-lambda-at-core-py-3228-_50))+(ref_AppliedPTransform_WriteSplit-train-Write-Write-WriteImpl-DoOnce-Map-decode-_52))+(ref_AppliedPTransform_WriteSplit-train-Write-Write-WriteImpl-InitializeWrite_53))+(ref_PCollection_PCollection_32/Write))+(ref_PCollection_PCollection_33/Write)
+[2022-03-24 15:44:18,626] {fn_runner.py:621} INFO - Running ((((ref_AppliedPTransform_InputToRecord-InferColumnTypes-DoOnce-Impulse_27)+(ref_AppliedPTransform_InputToRecord-InferColumnTypes-DoOnce-FlatMap-lambda-at-core-py-3228-_28))+(ref_AppliedPTransform_InputToRecord-InferColumnTypes-DoOnce-Map-decode-_30))+(ref_AppliedPTransform_InputToRecord-InferColumnTypes-InjectDefault_31))+(ref_PCollection_PCollection_19/Write)
+[2022-03-24 15:44:18,641] {fn_runner.py:621} INFO - Running ((((((((((ref_PCollection_PCollection_11/Read)+(ref_AppliedPTransform_InputToRecord-ToTFExample_32))+(ref_AppliedPTransform_SplitData-ParDo-ApplyPartitionFnFn-ParDo-ApplyPartitionFnFn-_35))+(ref_AppliedPTransform_WriteSplit-train-MaybeSerialize_37))+(ref_AppliedPTransform_WriteSplit-eval-MaybeSerialize_62))+(ref_AppliedPTransform_WriteSplit-train-Shuffle-AddRandomKeys_39))+(ref_AppliedPTransform_WriteSplit-train-Shuffle-ReshufflePerKey-Map-reify_timestamps-_41))+(WriteSplit[train]/Shuffle/ReshufflePerKey/GroupByKey/Write))+(ref_AppliedPTransform_WriteSplit-eval-Shuffle-AddRandomKeys_64))+(ref_AppliedPTransform_WriteSplit-eval-Shuffle-ReshufflePerKey-Map-reify_timestamps-_66))+(WriteSplit[eval]/Shuffle/ReshufflePerKey/GroupByKey/Write)
+[2022-03-24 15:46:21,512] {fn_runner.py:621} INFO - Running ((((((WriteSplit[train]/Shuffle/ReshufflePerKey/GroupByKey/Read)+(ref_AppliedPTransform_WriteSplit-train-Shuffle-ReshufflePerKey-FlatMap-restore_timestamps-_43))+(ref_AppliedPTransform_WriteSplit-train-Shuffle-RemoveRandomKeys_44))+(ref_AppliedPTransform_WriteSplit-train-Write-Write-WriteImpl-WindowInto-WindowIntoFn-_54))+(ref_AppliedPTransform_WriteSplit-train-Write-Write-WriteImpl-WriteBundles_55))+(ref_AppliedPTransform_WriteSplit-train-Write-Write-WriteImpl-Pair_56))+(WriteSplit[train]/Write/Write/WriteImpl/GroupByKey/Write)
+[2022-03-24 15:46:24,612] {tfrecordio.py:60} WARNING - Couldn't find python-snappy so the implementation of _TFRecordUtil._masked_crc32c is not as fast as it could be.
+[2022-03-24 15:47:41,108] {fn_runner.py:621} INFO - Running ((WriteSplit[train]/Write/Write/WriteImpl/GroupByKey/Read)+(ref_AppliedPTransform_WriteSplit-train-Write-Write-WriteImpl-Extract_58))+(ref_PCollection_PCollection_38/Write)
+[2022-03-24 15:47:41,132] {fn_runner.py:621} INFO - Running ((ref_PCollection_PCollection_32/Read)+(ref_AppliedPTransform_WriteSplit-train-Write-Write-WriteImpl-PreFinalize_59))+(ref_PCollection_PCollection_39/Write)
+[2022-03-24 15:47:41,141] {fn_runner.py:621} INFO - Running (ref_PCollection_PCollection_32/Read)+(ref_AppliedPTransform_WriteSplit-train-Write-Write-WriteImpl-FinalizeWrite_60)
+[2022-03-24 15:47:41,148] {filebasedsink.py:303} INFO - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1
+[2022-03-24 15:47:41,249] {filebasedsink.py:348} INFO - Renamed 1 shards in 0.10 seconds.
+[2022-03-24 15:47:41,269] {fn_runner.py:621} INFO - Running (((((ref_AppliedPTransform_WriteSplit-eval-Write-Write-WriteImpl-DoOnce-Impulse_74)+(ref_AppliedPTransform_WriteSplit-eval-Write-Write-WriteImpl-DoOnce-FlatMap-lambda-at-core-py-3228-_75))+(ref_AppliedPTransform_WriteSplit-eval-Write-Write-WriteImpl-DoOnce-Map-decode-_77))+(ref_AppliedPTransform_WriteSplit-eval-Write-Write-WriteImpl-InitializeWrite_78))+(ref_PCollection_PCollection_49/Write))+(ref_PCollection_PCollection_50/Write)
+[2022-03-24 15:47:41,292] {fn_runner.py:621} INFO - Running ((((((WriteSplit[eval]/Shuffle/ReshufflePerKey/GroupByKey/Read)+(ref_AppliedPTransform_WriteSplit-eval-Shuffle-ReshufflePerKey-FlatMap-restore_timestamps-_68))+(ref_AppliedPTransform_WriteSplit-eval-Shuffle-RemoveRandomKeys_69))+(ref_AppliedPTransform_WriteSplit-eval-Write-Write-WriteImpl-WindowInto-WindowIntoFn-_79))+(ref_AppliedPTransform_WriteSplit-eval-Write-Write-WriteImpl-WriteBundles_80))+(ref_AppliedPTransform_WriteSplit-eval-Write-Write-WriteImpl-Pair_81))+(WriteSplit[eval]/Write/Write/WriteImpl/GroupByKey/Write)
+[2022-03-24 15:48:21,630] {fn_runner.py:621} INFO - Running ((WriteSplit[eval]/Write/Write/WriteImpl/GroupByKey/Read)+(ref_AppliedPTransform_WriteSplit-eval-Write-Write-WriteImpl-Extract_83))+(ref_PCollection_PCollection_55/Write)
+[2022-03-24 15:48:21,638] {fn_runner.py:621} INFO - Running ((ref_PCollection_PCollection_49/Read)+(ref_AppliedPTransform_WriteSplit-eval-Write-Write-WriteImpl-PreFinalize_84))+(ref_PCollection_PCollection_56/Write)
+[2022-03-24 15:48:21,646] {fn_runner.py:621} INFO - Running (ref_PCollection_PCollection_49/Read)+(ref_AppliedPTransform_WriteSplit-eval-Write-Write-WriteImpl-FinalizeWrite_85)
+[2022-03-24 15:48:21,652] {filebasedsink.py:303} INFO - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1
+[2022-03-24 15:48:21,753] {filebasedsink.py:348} INFO - Renamed 1 shards in 0.10 seconds.
+[2022-03-24 15:48:21,774] {base_example_gen_executor.py:300} INFO - Examples generated.
+[2022-03-24 15:48:21,775] {base_component_launcher.py:206} INFO - Running publisher for RemoteZipCsvExampleGen
+[2022-03-24 15:48:21,782] {metadata_store.py:101} INFO - MetadataStore with DB connection initialized
+[2022-03-24 15:48:21,789] {python.py:175} INFO - Done. Returned value was: None
+[2022-03-24 15:48:21,800] {taskinstance.py:1282} INFO - Marking task as SUCCESS. dag_id=census_consumer_complaint, task_id=RemoteZipCsvExampleGen, execution_date=20220324T154229, start_date=20220324T154239, end_date=20220324T154821
+[2022-03-24 15:48:21,977] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-03-24 15:48:22,022] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

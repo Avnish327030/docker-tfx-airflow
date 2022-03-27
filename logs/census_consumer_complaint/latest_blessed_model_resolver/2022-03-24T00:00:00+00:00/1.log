@@ -1,0 +1,26 @@
+[2022-03-25 05:38:32,071] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: census_consumer_complaint.latest_blessed_model_resolver scheduled__2022-03-24T00:00:00+00:00 [queued]>
+[2022-03-25 05:38:32,076] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: census_consumer_complaint.latest_blessed_model_resolver scheduled__2022-03-24T00:00:00+00:00 [queued]>
+[2022-03-25 05:38:32,076] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-25 05:38:32,076] {taskinstance.py:1244} INFO - Starting attempt 1 of 1
+[2022-03-25 05:38:32,076] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-25 05:38:32,081] {taskinstance.py:1264} INFO - Executing <Task(AirflowComponent): latest_blessed_model_resolver> on 2022-03-24 00:00:00+00:00
+[2022-03-25 05:38:32,087] {standard_task_runner.py:52} INFO - Started process 95 to run task
+[2022-03-25 05:38:32,089] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'census_consumer_complaint', 'latest_blessed_model_resolver', 'scheduled__2022-03-24T00:00:00+00:00', '--job-id', '67', '--raw', '--subdir', 'DAGS_FOLDER/census_consumer_complaint.py', '--cfg-path', '/tmp/tmp9prwp3oi', '--error-file', '/tmp/tmpwmvirawm']
+[2022-03-25 05:38:32,089] {standard_task_runner.py:77} INFO - Job 67: Subtask latest_blessed_model_resolver
+[2022-03-25 05:38:32,115] {logging_mixin.py:109} INFO - Running <TaskInstance: census_consumer_complaint.latest_blessed_model_resolver scheduled__2022-03-24T00:00:00+00:00 [running]> on host 691464fec4e5
+[2022-03-25 05:38:32,139] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=census_consumer_complaint
+AIRFLOW_CTX_TASK_ID=latest_blessed_model_resolver
+AIRFLOW_CTX_EXECUTION_DATE=2022-03-24T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-03-24T00:00:00+00:00
+[2022-03-25 05:38:32,140] {base_component_launcher.py:190} INFO - Running driver for latest_blessed_model_resolver
+[2022-03-25 05:38:32,144] {metadata_store.py:101} INFO - MetadataStore with DB connection initialized
+[2022-03-25 05:38:32,155] {base_component_launcher.py:206} INFO - Running publisher for latest_blessed_model_resolver
+[2022-03-25 05:38:32,157] {metadata_store.py:101} INFO - MetadataStore with DB connection initialized
+[2022-03-25 05:38:32,157] {python.py:175} INFO - Done. Returned value was: None
+[2022-03-25 05:38:32,164] {taskinstance.py:1282} INFO - Marking task as SUCCESS. dag_id=census_consumer_complaint, task_id=latest_blessed_model_resolver, execution_date=20220324T000000, start_date=20220325T053832, end_date=20220325T053832
+[2022-03-25 05:38:32,180] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-03-25 05:38:32,200] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
