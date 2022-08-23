@@ -1,184 +1,0 @@
-[2022-03-24 15:57:32,215] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: census_consumer_complaint.Trainer manual__2022-03-24T15:42:29.578379+00:00 [queued]>
-[2022-03-24 15:57:32,220] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: census_consumer_complaint.Trainer manual__2022-03-24T15:42:29.578379+00:00 [queued]>
-[2022-03-24 15:57:32,220] {taskinstance.py:1243} INFO - 
---------------------------------------------------------------------------------
-[2022-03-24 15:57:32,220] {taskinstance.py:1244} INFO - Starting attempt 1 of 1
-[2022-03-24 15:57:32,220] {taskinstance.py:1245} INFO - 
---------------------------------------------------------------------------------
-[2022-03-24 15:57:32,226] {taskinstance.py:1264} INFO - Executing <Task(AirflowComponent): Trainer> on 2022-03-24 15:42:29.578379+00:00
-[2022-03-24 15:57:32,241] {standard_task_runner.py:52} INFO - Started process 1357 to run task
-[2022-03-24 15:57:32,243] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'census_consumer_complaint', 'Trainer', 'manual__2022-03-24T15:42:29.578379+00:00', '--job-id', '62', '--raw', '--subdir', 'DAGS_FOLDER/census_consumer_complaint.py', '--cfg-path', '/tmp/tmpzllqrpwp', '--error-file', '/tmp/tmphsgpszz0']
-[2022-03-24 15:57:32,243] {standard_task_runner.py:77} INFO - Job 62: Subtask Trainer
-[2022-03-24 15:57:32,271] {logging_mixin.py:109} INFO - Running <TaskInstance: census_consumer_complaint.Trainer manual__2022-03-24T15:42:29.578379+00:00 [running]> on host 691464fec4e5
-[2022-03-24 15:57:32,299] {taskinstance.py:1431} INFO - Exporting the following env vars:
-AIRFLOW_CTX_DAG_OWNER=***
-AIRFLOW_CTX_DAG_ID=census_consumer_complaint
-AIRFLOW_CTX_TASK_ID=Trainer
-AIRFLOW_CTX_EXECUTION_DATE=2022-03-24T15:42:29.578379+00:00
-AIRFLOW_CTX_DAG_RUN_ID=manual__2022-03-24T15:42:29.578379+00:00
-[2022-03-24 15:57:32,300] {base_component_launcher.py:190} INFO - Running driver for Trainer
-[2022-03-24 15:57:32,303] {metadata_store.py:101} INFO - MetadataStore with DB connection initialized
-[2022-03-24 15:57:32,321] {base_component_launcher.py:196} INFO - Running executor for Trainer
-[2022-03-24 15:57:32,323] {fn_args_utils.py:134} INFO - Train on the 'train' split when train_args.splits is not set.
-[2022-03-24 15:57:32,323] {fn_args_utils.py:138} INFO - Evaluate on the 'eval' split when eval_args.splits is not set.
-[2022-03-24 15:57:32,323] {examples_utils.py:50} WARNING - Examples artifact does not have payload_format custom property. Falling back to FORMAT_TF_EXAMPLE
-[2022-03-24 15:57:32,323] {examples_utils.py:50} WARNING - Examples artifact does not have payload_format custom property. Falling back to FORMAT_TF_EXAMPLE
-[2022-03-24 15:57:32,323] {examples_utils.py:50} WARNING - Examples artifact does not have payload_format custom property. Falling back to FORMAT_TF_EXAMPLE
-[2022-03-24 15:57:32,323] {udf_utils.py:48} INFO - udf_utils.get_fn {'train_args': '{\n  "num_steps": 1000\n}', 'eval_args': '{\n  "num_steps": 100\n}', 'module_file': None, 'run_fn': None, 'trainer_fn': None, 'custom_config': 'null', 'module_path': 'trainer@/opt/***/census_consumer_complaint_data/census_consumer_complaint/artifact/_wheels/tfx_user_code_Trainer-0.0+7d38a8f688a527b8a8904485f99d6148d714a43b7d0dce30e3cd107e531e97d0-py3-none-any.whl'} 'run_fn'
-[2022-03-24 15:57:32,324] {udf_utils.py:331} INFO - Installing '/opt/***/census_consumer_complaint_data/census_consumer_complaint/artifact/_wheels/tfx_user_code_Trainer-0.0+7d38a8f688a527b8a8904485f99d6148d714a43b7d0dce30e3cd107e531e97d0-py3-none-any.whl' to a temporary directory.
-[2022-03-24 15:57:32,324] {udf_utils.py:338} INFO - Executing: ['/usr/local/bin/python', '-m', 'pip', 'install', '--target', '/tmp/tmp29mhg57q', '/opt/***/census_consumer_complaint_data/census_consumer_complaint/artifact/_wheels/tfx_user_code_Trainer-0.0+7d38a8f688a527b8a8904485f99d6148d714a43b7d0dce30e3cd107e531e97d0-py3-none-any.whl']
-[2022-03-24 15:57:36,323] {udf_utils.py:340} INFO - Successfully installed '/opt/***/census_consumer_complaint_data/census_consumer_complaint/artifact/_wheels/tfx_user_code_Trainer-0.0+7d38a8f688a527b8a8904485f99d6148d714a43b7d0dce30e3cd107e531e97d0-py3-none-any.whl'.
-[2022-03-24 15:57:36,324] {executor.py:177} INFO - Training model.
-[2022-03-24 15:57:36,329] {tensor_representation_util.py:347} INFO - Feature Company response to consumer_xf has a shape dim {
-  size: 6
-}
-. Setting to DenseTensor.
-[2022-03-24 15:57:36,329] {tensor_representation_util.py:347} INFO - Feature Consumer complaint narrative_xf has a shape . Setting to DenseTensor.
-[2022-03-24 15:57:36,329] {tensor_representation_util.py:347} INFO - Feature Consumer disputed?_xf has a shape dim {
-  size: 1
-}
-. Setting to DenseTensor.
-[2022-03-24 15:57:36,329] {tensor_representation_util.py:347} INFO - Feature Issue_xf has a shape dim {
-  size: 91
-}
-. Setting to DenseTensor.
-[2022-03-24 15:57:36,330] {tensor_representation_util.py:347} INFO - Feature Product_xf has a shape dim {
-  size: 12
-}
-. Setting to DenseTensor.
-[2022-03-24 15:57:36,330] {tensor_representation_util.py:347} INFO - Feature State_xf has a shape dim {
-  size: 61
-}
-. Setting to DenseTensor.
-[2022-03-24 15:57:36,330] {tensor_representation_util.py:347} INFO - Feature Sub-product_xf has a shape dim {
-  size: 46
-}
-. Setting to DenseTensor.
-[2022-03-24 15:57:36,492] {tensor_representation_util.py:347} INFO - Feature Company response to consumer_xf has a shape dim {
-  size: 6
-}
-. Setting to DenseTensor.
-[2022-03-24 15:57:36,492] {tensor_representation_util.py:347} INFO - Feature Consumer complaint narrative_xf has a shape . Setting to DenseTensor.
-[2022-03-24 15:57:36,492] {tensor_representation_util.py:347} INFO - Feature Consumer disputed?_xf has a shape dim {
-  size: 1
-}
-. Setting to DenseTensor.
-[2022-03-24 15:57:36,492] {tensor_representation_util.py:347} INFO - Feature Issue_xf has a shape dim {
-  size: 91
-}
-. Setting to DenseTensor.
-[2022-03-24 15:57:36,492] {tensor_representation_util.py:347} INFO - Feature Product_xf has a shape dim {
-  size: 12
-}
-. Setting to DenseTensor.
-[2022-03-24 15:57:36,492] {tensor_representation_util.py:347} INFO - Feature State_xf has a shape dim {
-  size: 61
-}
-. Setting to DenseTensor.
-[2022-03-24 15:57:36,492] {tensor_representation_util.py:347} INFO - Feature Sub-product_xf has a shape dim {
-  size: 46
-}
-. Setting to DenseTensor.
-[2022-03-24 15:57:36,512] {tensor_representation_util.py:347} INFO - Feature Company response to consumer_xf has a shape dim {
-  size: 6
-}
-. Setting to DenseTensor.
-[2022-03-24 15:57:36,512] {tensor_representation_util.py:347} INFO - Feature Consumer complaint narrative_xf has a shape . Setting to DenseTensor.
-[2022-03-24 15:57:36,512] {tensor_representation_util.py:347} INFO - Feature Consumer disputed?_xf has a shape dim {
-  size: 1
-}
-. Setting to DenseTensor.
-[2022-03-24 15:57:36,512] {tensor_representation_util.py:347} INFO - Feature Issue_xf has a shape dim {
-  size: 91
-}
-. Setting to DenseTensor.
-[2022-03-24 15:57:36,512] {tensor_representation_util.py:347} INFO - Feature Product_xf has a shape dim {
-  size: 12
-}
-. Setting to DenseTensor.
-[2022-03-24 15:57:36,512] {tensor_representation_util.py:347} INFO - Feature State_xf has a shape dim {
-  size: 61
-}
-. Setting to DenseTensor.
-[2022-03-24 15:57:36,513] {tensor_representation_util.py:347} INFO - Feature Sub-product_xf has a shape dim {
-  size: 46
-}
-. Setting to DenseTensor.
-[2022-03-24 15:57:36,536] {tensor_representation_util.py:347} INFO - Feature Company response to consumer_xf has a shape dim {
-  size: 6
-}
-. Setting to DenseTensor.
-[2022-03-24 15:57:36,536] {tensor_representation_util.py:347} INFO - Feature Consumer complaint narrative_xf has a shape . Setting to DenseTensor.
-[2022-03-24 15:57:36,536] {tensor_representation_util.py:347} INFO - Feature Consumer disputed?_xf has a shape dim {
-  size: 1
-}
-. Setting to DenseTensor.
-[2022-03-24 15:57:36,536] {tensor_representation_util.py:347} INFO - Feature Issue_xf has a shape dim {
-  size: 91
-}
-. Setting to DenseTensor.
-[2022-03-24 15:57:36,536] {tensor_representation_util.py:347} INFO - Feature Product_xf has a shape dim {
-  size: 12
-}
-. Setting to DenseTensor.
-[2022-03-24 15:57:36,536] {tensor_representation_util.py:347} INFO - Feature State_xf has a shape dim {
-  size: 61
-}
-. Setting to DenseTensor.
-[2022-03-24 15:57:36,536] {tensor_representation_util.py:347} INFO - Feature Sub-product_xf has a shape dim {
-  size: 46
-}
-. Setting to DenseTensor.
-[2022-03-24 15:57:36,542] {logging_mixin.py:109} INFO - building model with columnCompany response to consumer_xf
-[2022-03-24 15:57:36,547] {logging_mixin.py:109} INFO - building model with columnConsumer complaint narrative_xf
-[2022-03-24 15:57:36,547] {logging_mixin.py:109} INFO - building model with columnIssue_xf
-[2022-03-24 15:57:36,548] {logging_mixin.py:109} INFO - building model with columnProduct_xf
-[2022-03-24 15:57:36,549] {logging_mixin.py:109} INFO - building model with columnState_xf
-[2022-03-24 15:57:36,549] {logging_mixin.py:109} INFO - building model with columnSub-product_xf
-[2022-03-24 15:57:36,653] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/keras/engine/functional.py:559: UserWarning: Input dict contained keys ['Consumer complaint narrative_xf'] which did not match any model input. They will be ignored by the model.
-  inputs = self._flatten_to_reference_inputs(inputs)
-
-[2022-03-24 15:57:37,018] {logging_mixin.py:109} INFO -    1/1000 [..............................] - ETA: 6:30 - loss: 0.7139 - binary_accuracy: 0.8100
-[2022-03-24 15:57:37,069] {logging_mixin.py:109} INFO -   42/1000 [>.............................] - ETA: 1s - loss: 0.5869 - binary_accuracy: 0.8076  
-[2022-03-24 15:57:37,119] {logging_mixin.py:109} INFO -   79/1000 [=>............................] - ETA: 1s - loss: 0.5417 - binary_accuracy: 0.8073
-[2022-03-24 15:57:37,170] {logging_mixin.py:109} INFO -  116/1000 [==>...........................] - ETA: 1s - loss: 0.5238 - binary_accuracy: 0.8070
-[2022-03-24 15:57:37,220] {logging_mixin.py:109} INFO -  155/1000 [===>..........................] - ETA: 1s - loss: 0.5111 - binary_accuracy: 0.8087
-[2022-03-24 15:57:37,271] {logging_mixin.py:109} INFO -  196/1000 [====>.........................] - ETA: 1s - loss: 0.5056 - binary_accuracy: 0.8078
-[2022-03-24 15:57:37,322] {logging_mixin.py:109} INFO -  233/1000 [=====>........................] - ETA: 1s - loss: 0.5027 - binary_accuracy: 0.8074
-[2022-03-24 15:57:37,373] {logging_mixin.py:109} INFO -  274/1000 [=======>......................] - ETA: 0s - loss: 0.4993 - binary_accuracy: 0.8077
-[2022-03-24 15:57:37,424] {logging_mixin.py:109} INFO -  310/1000 [========>.....................] - ETA: 0s - loss: 0.4969 - binary_accuracy: 0.8079
-[2022-03-24 15:57:37,474] {logging_mixin.py:109} INFO -  341/1000 [=========>....................] - ETA: 0s - loss: 0.4963 - binary_accuracy: 0.8073
-[2022-03-24 15:57:37,524] {logging_mixin.py:109} INFO -  354/1000 [=========>....................] - ETA: 0s - loss: 0.4961 - binary_accuracy: 0.8071
-[2022-03-24 15:57:37,576] {logging_mixin.py:109} INFO -  375/1000 [==========>...................] - ETA: 0s - loss: 0.4975 - binary_accuracy: 0.8055
-[2022-03-24 15:57:37,626] {logging_mixin.py:109} INFO -  391/1000 [==========>...................] - ETA: 0s - loss: 0.4983 - binary_accuracy: 0.8045
-[2022-03-24 15:57:37,677] {logging_mixin.py:109} INFO -  417/1000 [===========>..................] - ETA: 0s - loss: 0.4998 - binary_accuracy: 0.8028
-[2022-03-24 15:57:37,728] {logging_mixin.py:109} INFO -  439/1000 [============>.................] - ETA: 0s - loss: 0.5004 - binary_accuracy: 0.8020
-[2022-03-24 15:57:37,778] {logging_mixin.py:109} INFO -  468/1000 [=============>................] - ETA: 0s - loss: 0.5008 - binary_accuracy: 0.8012
-[2022-03-24 15:57:37,830] {logging_mixin.py:109} INFO -  498/1000 [=============>................] - ETA: 0s - loss: 0.4997 - binary_accuracy: 0.8015
-[2022-03-24 15:57:37,880] {logging_mixin.py:109} INFO -  533/1000 [==============>...............] - ETA: 0s - loss: 0.4976 - binary_accuracy: 0.8026
-[2022-03-24 15:57:37,930] {logging_mixin.py:109} INFO -  571/1000 [================>.............] - ETA: 0s - loss: 0.4954 - binary_accuracy: 0.8037
-[2022-03-24 15:57:37,982] {logging_mixin.py:109} INFO -  599/1000 [================>.............] - ETA: 0s - loss: 0.4942 - binary_accuracy: 0.8044
-[2022-03-24 15:57:38,033] {logging_mixin.py:109} INFO -  625/1000 [=================>............] - ETA: 0s - loss: 0.4927 - binary_accuracy: 0.8052
-[2022-03-24 15:57:38,084] {logging_mixin.py:109} INFO -  654/1000 [==================>...........] - ETA: 0s - loss: 0.4918 - binary_accuracy: 0.8057
-[2022-03-24 15:57:38,134] {logging_mixin.py:109} INFO -  677/1000 [===================>..........] - ETA: 0s - loss: 0.4913 - binary_accuracy: 0.8059
-[2022-03-24 15:57:38,185] {logging_mixin.py:109} INFO -  705/1000 [====================>.........] - ETA: 0s - loss: 0.4900 - binary_accuracy: 0.8065
-[2022-03-24 15:57:38,235] {logging_mixin.py:109} INFO -  737/1000 [=====================>........] - ETA: 0s - loss: 0.4893 - binary_accuracy: 0.8068
-[2022-03-24 15:57:38,287] {logging_mixin.py:109} INFO -  771/1000 [======================>.......] - ETA: 0s - loss: 0.4887 - binary_accuracy: 0.8070
-[2022-03-24 15:57:38,338] {logging_mixin.py:109} INFO -  799/1000 [======================>.......] - ETA: 0s - loss: 0.4890 - binary_accuracy: 0.8067
-[2022-03-24 15:57:38,388] {logging_mixin.py:109} INFO -  829/1000 [=======================>......] - ETA: 0s - loss: 0.4894 - binary_accuracy: 0.8063
-[2022-03-24 15:57:38,439] {logging_mixin.py:109} INFO -  859/1000 [========================>.....] - ETA: 0s - loss: 0.4900 - binary_accuracy: 0.8056
-[2022-03-24 15:57:38,490] {logging_mixin.py:109} INFO -  888/1000 [=========================>....] - ETA: 0s - loss: 0.4902 - binary_accuracy: 0.8054
-[2022-03-24 15:57:38,542] {logging_mixin.py:109} INFO -  916/1000 [==========================>...] - ETA: 0s - loss: 0.4904 - binary_accuracy: 0.8050
-[2022-03-24 15:57:38,594] {logging_mixin.py:109} INFO -  945/1000 [===========================>..] - ETA: 0s - loss: 0.4909 - binary_accuracy: 0.8044
-[2022-03-24 15:57:38,656] {logging_mixin.py:109} INFO -  971/1000 [============================>.] - ETA: 0s - loss: 0.4916 - binary_accuracy: 0.8038
-[2022-03-24 15:57:38,707] {logging_mixin.py:109} INFO - 1000/1000 [==============================] - ETA: 0s - loss: 0.4914 - binary_accuracy: 0.8038
-[2022-03-24 15:57:38,999] {logging_mixin.py:109} INFO - 1000/1000 [==============================] - 2s 2ms/step - loss: 0.4914 - binary_accuracy: 0.8038 - val_loss: 0.4772 - val_binary_accuracy: 0.8087
-[2022-03-24 15:57:39,198] {saved_transform_io.py:166} INFO - tensorflow_text is not available.
-[2022-03-24 15:57:39,198] {saved_transform_io.py:166} INFO - tensorflow_decision_forests is not available.
-[2022-03-24 15:57:39,199] {saved_transform_io.py:166} INFO - struct2tensor is not available.
-[2022-03-24 15:57:40,076] {logging_mixin.py:109} INFO - {'Company': FixedLenFeature(shape=[1], dtype=tf.string, default_value=None), 'Company public response': VarLenFeature(dtype=tf.string), 'Company response to consumer': FixedLenFeature(shape=[1], dtype=tf.string, default_value=None), 'Complaint ID': FixedLenFeature(shape=[1], dtype=tf.int64, default_value=None), 'Consumer complaint narrative': VarLenFeature(dtype=tf.string), 'Consumer consent provided?': VarLenFeature(dtype=tf.string), 'Consumer disputed?': FixedLenFeature(shape=[1], dtype=tf.float32, default_value=None), 'Date received': FixedLenFeature(shape=[1], dtype=tf.string, default_value=None), 'Date sent to company': FixedLenFeature(shape=[1], dtype=tf.string, default_value=None), 'Issue': FixedLenFeature(shape=[1], dtype=tf.string, default_value=None), 'Product': FixedLenFeature(shape=[1], dtype=tf.string, default_value=None), 'State': VarLenFeature(dtype=tf.string), 'Sub-issue': VarLenFeature(dtype=tf.string), 'Sub-product': VarLenFeature(dtype=tf.string), 'Submitted via': FixedLenFeature(shape=[1], dtype=tf.string, default_value=None), 'Tags': VarLenFeature(dtype=tf.string), 'Timely response?': FixedLenFeature(shape=[1], dtype=tf.string, default_value=None), 'ZIP code': VarLenFeature(dtype=tf.string)}
-[2022-03-24 15:57:42,735] {builder_impl.py:784} INFO - Assets written to: /opt/***/census_consumer_complaint_data/census_consumer_complaint/artifact/Trainer/model/11/Format-Serving/assets
-[2022-03-24 15:57:42,781] {python.py:175} INFO - Done. Returned value was: None
-[2022-03-24 15:57:42,789] {taskinstance.py:1282} INFO - Marking task as SUCCESS. dag_id=census_consumer_complaint, task_id=Trainer, execution_date=20220324T154229, start_date=20220324T155732, end_date=20220324T155742
-[2022-03-24 15:57:42,864] {local_task_job.py:154} INFO - Task exited with return code 0
-[2022-03-24 15:57:42,884] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
